@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>고객관리시스템</title>
+
+    <style>
+    * {
+        margin : 0;
+        padding : 0;
+        box-sizing : border-box;
+        table
+    }
+    header {
+        width : 100%;
+        padding : 30px;
+        background-color : #ccc;
+        text-align : center;
+    }
+
+    nav {
+        background-color : black;
+        padding : 5px
+    }
+
+    nav ul {
+        display : flex;
+    }
+
+    nav ul li {
+        list-style : none;
+        color : white;
+        padding : 10px;
+    }
+
+    nav ul li:hover {
+        cursor : pointer;
+        font-weight:700;
+    }
+
+    nav ul li:nth-of-type(4){
+        margin-left:auto;
+        margin-right : 15px;
+    }
+
+    div.table_box {
+        width : 100vw;
+        display:flex;
+        align-items: center;
+	    justify-content: center;
+	    padding : 20px;
+	    text-align : center;
+    }
+
+    table.buyer_list {
+        width : 85%;
+        border-collapse : collapse;
+    }
+
+    table.buyer_list th{
+        padding : 6px ;
+        background-color : #ddd;
+    }
+
+      table.buyer_list td{
+        padding : 6px ;
+
+      }
+
+</style>
+</head>
+
+<body>
+
+    <header>
+        <h1>나라상사 고객관리 시스템</h1>
+        <p>2021 v.01.0.0</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>주문관리</li>
+            <li>결제관리</li>
+            <li>로그인인</li>
+       </ul>
+    </nav>
+
+    <div class="table_box">
+        <table class="buyer_list">
+            <tr>
+                <th>고객ID</th>
+                <th>이름</th>
+                <th>전화번호</th>
+                <th>주소</th>
+                <th>담당자명</th>
+                <th>담당자연락처</th>
+                <th>매출액합계(만원)</th>
+            </tr>
+
+            <tr>
+                <td>B001</td>
+                <td>롯데상사</td>
+                <td>02-000-0000</td>
+                <td>서울시 영등포구</td>
+                <td>홍길동</td>
+                <td>000-0000-0000</td>
+                <td>9,303</td>
+            </tr>
+            <tr>
+                <td>B002</td>
+                <td>서울상사</td>
+                <td>062-000-0000</td>
+                <td>광주광역시 북구</td>
+                <td>이몽룡</td>
+                <td>000-0000-0000</td>
+                <td>12,246</td>
+            </tr>
+
+        </table>
+    </div>
+
+
+</body>
+</html>
