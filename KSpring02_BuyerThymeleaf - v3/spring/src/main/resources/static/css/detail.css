@@ -1,0 +1,50 @@
+div.detail_box {
+    width : 100vw;
+}
+
+div.detail_buyer_info,
+div.detail_buyer_product {
+    width : 70%;
+    margin : 20px auto;
+    display ; flex;
+}
+
+table.buyer_info {
+    display :inline-block;
+    width : 50%;
+ }
+
+ table.buyer_info th{
+    background-color : #ddd;
+    width : 15%;
+    padding : 1rem;
+ }
+
+ table.buyer_info td{
+     width : 35%;
+     padding : 1rem;
+  }
+
+  div.detail_buyer_info button {
+    display :inline-block;
+    width : 80px;
+    height : 50px;
+    border : none;
+    outline : none;
+    padding :0.5rem;
+  }
+
+  .detail_buyer_product table {
+    width : 80% ;
+    text-align : center;
+
+  }
+
+  .detail_buyer_product table th,
+  .detail_buyer_product table td {
+     padding : 1rem;
+  }
+
+   .detail_buyer_product table th {
+    background : #eee;
+   }

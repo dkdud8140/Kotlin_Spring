@@ -1,0 +1,60 @@
+div.write_box {
+    width : 100vw;
+    padding : 20px;
+}
+
+form.write_form {
+    width:70%;
+    margin:20px auto;
+}
+
+form.write_form div {
+    width:100%;
+    font-size:0;
+}
+
+form.write_form div label{
+    display:inline-block;
+    width:30%;
+    padding:0.6rem;
+    background-color : #ddd;
+    margin:4px;
+    font-size:15px;
+    font-weight : 600;
+}
+
+form.write_form div input {
+    display:inline-block;
+    width:65%;
+    padding:0.6rem;
+    outline:none;
+    border:none;
+    background:#FAF0F2;
+    margin: 4px;
+    font-size:15px;
+}
+
+form.write_form div input:focus {
+    outline:none;
+    border:none;
+    background-color:#95324C;
+    color:white;
+
+}
+
+.btn_box button {
+    padding:1rem;
+    outline:none;
+    border:none;
+    font-weight : 700;
+    color:white;
+    background-color:#95324C;
+    margin: 15px;
+    border-radius : 5px;
+
+}
+
+.btn_box button:hover {
+
+    cursor : pointer;
+}

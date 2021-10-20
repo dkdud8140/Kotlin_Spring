@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="@{/layout}">
+
+<div class="write_box" layout:fragment="content">
+    <form class="write_form" method="POST">
+        <div>
+            <label>고객ID</label><input/>
+        </div>
+        <div>
+            <label>이름</label><input/>
+        </div>
+        <div>
+            <label>전화번호</label><input/>
+        </div>
+        <div>
+            <label>주소</label><input/>
+        </div>
+        <div>
+            <label>담당자명</label><input/>
+        </div>
+        <div>
+            <label>담당자연락처</label><input/>
+        </div>
+
+        <div class="btn_box">
+            <button class="btn_save">SAVE</button>
+            <button class="btn_to_list">LIST</button>
+        </div>
+    </form>
+
+</div>
+
+<script>
+    $(function() {
+        $("button.btn_save").on("click", function() {
+            location.href="/buyer/insert"
+        })
+    })
+</script>
+
+
+</html>

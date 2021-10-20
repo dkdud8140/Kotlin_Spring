@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th = "http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="@{/layout}">
+
+    <div class="table_box" layout:fragment="content">
+        <table class="buyer_list">
+            <tr>
+                <th>고객ID</th>
+                <th>이름</th>
+                <th>전화번호</th>
+                <th>주소</th>
+                <th>담당자명</th>
+                <th>담당자연락처</th>
+                <th>매출액합계(만원)</th>
+            </tr>
+
+            <tr class="buyer_tr" th:each="BUYER:${BUYERS}" th:data-id="${BUYER.userid}">
+                <td th:text="${BUYER.userid}">B001</td>
+                <td th:text="${BUYER.name}">롯데상사</td>
+                <td th:text="${BUYER.tel}">02-000-0000</td>
+                <td th:text="${BUYER.address}">서울시 영등포구</td>
+                <td th:text="${BUYER.manager}">홍길동</td>
+                <td th:text="${BUYER.man_tel}">000-0000-0000</td>
+                <td th:text="${BUYER.buy_total}">9,303</td>
+            </tr>
+
+        </table>
+    </div>
+
+</html>
