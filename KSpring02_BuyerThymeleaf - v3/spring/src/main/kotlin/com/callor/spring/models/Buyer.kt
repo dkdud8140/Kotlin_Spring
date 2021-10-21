@@ -11,24 +11,24 @@ data class Buyer(
     // primary Key
     @Id
     @Column(columnDefinition = "CHAR(4)",nullable=true, unique = true, name = "userid" )
-    var userid : String,
+    var userid : String?= null,
 
     @Column(columnDefinition = "CHAR(25)",nullable=true )
-    var name : String,
+    var name : String?= null,
 
     @Column(columnDefinition = "CHAR(25)",nullable=true )
-    var tel : String,
+    var tel : String?= null,
 
     @Column(nullable=true )
-    var address : String,
+    var address : String?= null,
 
     @Column(columnDefinition = "CHAR(25)",nullable=true )
-    var manager : String,
+    var manager : String?= null,
 
     @Column(columnDefinition = "CHAR(25)",nullable=true )
-    var man_tel : String,
+    var man_tel : String?= null,
 
     @Column(nullable = true)
-    var buy_total :Int = 0,
+    var buy_total :Int?= null,
 
 )

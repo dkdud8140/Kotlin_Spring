@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="ko"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html lang="ko"
+      xmlns:th = "http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="@{/layout}">
 
 <div class="write_box" layout:fragment="content">
-    <form class="write_form" method="POST">
-        <div>
-            <label>고객ID</label><input/>
-        </div>
-        <div>
-            <label>이름</label><input/>
-        </div>
-        <div>
-            <label>전화번호</label><input/>
-        </div>
-        <div>
-            <label>주소</label><input/>
-        </div>
-        <div>
-            <label>담당자명</label><input/>
-        </div>
-        <div>
-            <label>담당자연락처</label><input/>
-        </div>
+    <form class="write_form" method="POST" th:object="${BUYER}">
+        <fieldset>
+            <legend>고객정보 등록</legend>
+            <div>
+                <label>고객ID</label><input th:field="*{userid}"/>
+            </div>
+            <div>
+                <label>이름</label><input th:field="*{name}"/>
+            </div>
+            <div>
+                <label>전화번호</label><input th:field="*{tel}"/>
+            </div>
+            <div>
+                <label>주소</label><input th:field="*{address}"/>
+            </div>
+            <div>
+                <label>담당자명</label><input th:field="*{manager}"/>
+            </div>
+            <div>
+                <label>담당자연락처</label><input th:field="*{man_tel}"/>
+            </div>
 
-        <div class="btn_box">
-            <button class="btn_save">SAVE</button>
-            <button class="btn_to_list">LIST</button>
-        </div>
+            <div class="btn_box">
+                <button class="btn_save">SAVE</button>
+                <button class="btn_to_list">LIST</button>
+            </div>
+        </fieldset>
     </form>
 
 </div>

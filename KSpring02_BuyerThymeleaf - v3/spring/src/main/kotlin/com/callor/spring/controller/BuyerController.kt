@@ -30,17 +30,36 @@ class BuyerController(val bSer:BuyerService) {
     }
 
     @ResponseBody
-    @RequestMapping(value = ["/insert"],method = [RequestMethod.POST])
-    fun insert(): Buyer {
+    @RequestMapping(value = ["/insert"],method = [RequestMethod.GET])
+    fun insert(model:Model): Buyer {
         var insertBuyer = ConfigData.BUYER_LIST[0]
+        model["BUYER"] = insertBuyer
+
         bSer.insert(insertBuyer);
         return insertBuyer;
     }
 
+    @RequestMapping(value = ["/insert"],method = [RequestMethod.POST])
+    fun insert(model:Model,buyer:Buyer):String {
+        bSer.insert(buyer);
+        return "redirect:/buyer/list"
+    }
+
+
 
     @RequestMapping(value = ["/write"],method = [RequestMethod.GET])
-    fun write(): String {
+    fun write(model:Model): String {
+        model["BUYER"] = Buyer()
         return "buyer/write"
     }
 
+    @RequestMapping(value=["/update/{userid}"],method = [RequestMethod.GET])
+    fun update(model:Model, @PathVariable("userid") userid: String):String {
+
+        val buyer = bSer.findById(userid)
+        model["BUYER"] = buyer
+        return "buyer/write"
     }
+
+
+}

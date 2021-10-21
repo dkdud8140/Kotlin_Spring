@@ -2,6 +2,10 @@
 <html lang="ko"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="@{/layout}">
 
+<script th:inlin="javascript">
+    const userid = /*[[ ${BUYER.userid} ]]*/ null
+</script>
+
 <div class="detail_box" layout:fragment="content">
     <div class="detail_buyer_info">
         <table class="buyer_info">
@@ -18,8 +22,8 @@
                 <td th:text="${USER.address}" >userADDRESS</td>
             </tr>
         </table>
-        <button>고객정보수정</button>
-        <button>고객정보삭제</button>
+        <button class="btn_update">고객정보수정</button>
+        <button class="btn_update btn_warning">고객정보삭제</button>
     </div>
 
     <div class="detail_buyer_product">

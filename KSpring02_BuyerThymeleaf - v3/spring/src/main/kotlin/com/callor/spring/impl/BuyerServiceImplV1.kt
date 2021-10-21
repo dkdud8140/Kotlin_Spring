@@ -15,7 +15,7 @@ class BuyerServiceImplV1:BuyerService {
     private lateinit var bDao : BuyerRepository ;
 
     override fun selectAll(): Array<Buyer> {
-        return ConfigData.BUYER_LIST
+        return bDao.findAll().toTypedArray()
     }
 
     override fun findById(userid: String): Buyer {
