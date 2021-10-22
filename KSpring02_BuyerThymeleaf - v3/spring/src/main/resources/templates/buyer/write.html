@@ -2,7 +2,7 @@
 <html lang="ko"
       xmlns:th = "http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="@{/layout}">
+      layout:decorator="~{/layout}">
 
 <div class="write_box" layout:fragment="content">
     <form class="write_form" method="POST" th:object="${BUYER}">

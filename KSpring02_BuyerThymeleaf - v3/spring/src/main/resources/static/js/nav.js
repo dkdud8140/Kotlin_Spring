@@ -18,12 +18,14 @@ $(function(){
 //        }
 //        alert(JSON.stringify(tagInform))
 
-        if(text == "home") {
-            location.href="/"
-        } else if(text == "order") {
-           location.href="/oder"
-        } else if(text == "login") {
-           location.href="/login"
-        }
+                let href = "/"
+                if(text === "주문관리") {
+                    href += "order/list"
+                } else if (text == "결제관리") {
+                    href += "pay"
+                } else if (text == "로그인") {
+                    href += "login"
+                }
+                location.href = `${href}`
     })
 })

@@ -11,8 +11,9 @@ $(function(){
 //                    alert("Update")
                 href = `${href}/update/${userid}`
             }else if(className.includes("btn_delete")) {
-//                alert("Delete")
-                href = `${href}/delete/${userid}`
+                if(confirm("삭제할까요")) {
+                    href=`${href}/delete/${userid}`
+                } else return false
             }
             location.href=`${href}`
         })

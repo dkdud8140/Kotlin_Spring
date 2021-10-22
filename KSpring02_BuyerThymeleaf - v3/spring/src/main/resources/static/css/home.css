@@ -48,16 +48,16 @@
 	    padding : 20px;
     }
 
-    table.buyer_list {
+    table.buyer_list, table.order_list {
         width : 85%;
     }
 
-    table.buyer_list th{
+    table.buyer_list th, table.order_list th{
         padding : 6px ;
         background-color : #ddd;
     }
 
-      table.buyer_list td{
+      table.buyer_list td,table.order_list td{
         padding : 6px ;
 
       }

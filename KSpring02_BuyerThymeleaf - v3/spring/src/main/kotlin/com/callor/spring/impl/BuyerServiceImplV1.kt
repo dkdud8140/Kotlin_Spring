@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 import kotlin.random.Random
 
 @Service("bSerV1")
-class BuyerServiceImplV1:BuyerService {
+class BuyerServiceImplV1(val bRepo: BuyerRepository):BuyerService {
 
     @Autowired
     private lateinit var bDao : BuyerRepository ;
@@ -19,25 +19,27 @@ class BuyerServiceImplV1:BuyerService {
     }
 
     override fun findById(userid: String): Buyer {
-        val findUser = ConfigData.BUYER_LIST.filter {buyer-> buyer.userid == userid}
-        return findUser[0]
+        //        val findUser = ConfigData.BUYER_LIST.filter { buyer-> buyer.userid == userid }
+        //val buyer = bRepo.findById(userid).orElse(null)
+//        return buyer;
+        val buyer = bRepo.findById(userid)
+        return buyer.get()
     }
 
     override fun findByName(name: String): Array<Buyer> {
-        val userNum = ConfigData.RND.nextInt(ConfigData.BUYER_LIST.size)
-        return arrayOf(ConfigData.BUYER_LIST[userNum])
+        return bRepo.findByName(name)
     }
 
-    override fun findByTel(name: String): Array<Buyer> {
-        TODO("Not yet implemented")
+    override fun findByTel(tel: String): Array<Buyer> {
+        return bRepo.findByTel(tel)
     }
 
     override fun insert(buyer: Buyer): Buyer {
         return bDao.save(buyer);
     }
 
-    override fun delete(userid: String): Buyer {
-        TODO("Not yet implemented")
+    override fun delete(userid: String){
+        bRepo.deleteById(userid)
     }
 
     override fun update(buyer: Buyer): Buyer {
