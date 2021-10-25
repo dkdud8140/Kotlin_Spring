@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{/layout}">
+
+<script th:inlin="javascript">
+    const userid = /*[[ ${BUYER.userid} ]]*/ null
+</script>
+
+<div class="detail_box" layout:fragment="content">
+    <div class="detail_buyer_info">
+        <table class="buyer_info">
+            <tr>
+                <th>ID</th>
+                <td th:text="${USER.userid}" >userID</td>
+                <th>전화번호</th>
+                <td th:text="${USER.tel}" >userTEL</td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td th:text="${USER.name}" >userNAME</td>
+                <th>주소</th>
+                <td th:text="${USER.address}" >userADDRESS</td>
+            </tr>
+        </table>
+        <button class="btn_update">고객정보수정</button>
+        <button class="btn_update btn_warning">고객정보삭제</button>
+    </div>
+
+    <div class="detail_buyer_product">
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>상품명</th>
+                <th>단가</th>
+                <th>수량</th>
+                <th>금액</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>아이폰13</td>
+                <td>1,200,000</td>
+                <td>10</td>
+                <td>12,000,000</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>아이폰13</td>
+                <td>1,200,000</td>
+                <td>10</td>
+                <td>12,000,000</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,6 @@
+# logger settings
+logging:
+  level:
+  root: info
+  com.collor.spring.controller : debug
+  com.collor.spring.service: info

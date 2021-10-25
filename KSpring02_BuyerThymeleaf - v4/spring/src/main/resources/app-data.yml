@@ -1,0 +1,4 @@
+com:
+  callor:
+    spring:
+      student-file: "student.txt"
