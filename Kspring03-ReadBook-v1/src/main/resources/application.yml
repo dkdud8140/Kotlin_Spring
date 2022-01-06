@@ -4,8 +4,6 @@ spring:
       optional:classpath:application-jpa.yml,
       classpath:application-dbms.yml
 
-
-
   mvc:
     static-path-pattern: /static/**
   web:

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko"
-      xmlns:th = "http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="~{/layout}">
-
 <section class="write_box" layout:fragment="content">
     <div class="table_box">
         <table class="write_table">
@@ -16,22 +14,14 @@
                 <td><input placeholder="읽기 시작한 시간"/></td>
                 <td><input placeholder="다 읽은 시간"/></td>
             </tr>
-            <tr>
-                <td colspan="4"><input placeholder="한 줄 감상"/></td>
-            </tr>
-            <tr>
-                <td colspan="4"><input placeholder="내용"/></td>
-            </tr>
+            <tr> <td colspan="4"><input placeholder="한 줄 감상"/></td></tr>
+            <tr><td colspan="4"><input placeholder="내용"/></td></tr>
         </table>
     </div>
-
     <div class="btn_box">
         <button>저장</button>
         <button>새로작성</button>
         <button>리스트로</button>
     </div>
-
 </section>
-
-
 </html>
